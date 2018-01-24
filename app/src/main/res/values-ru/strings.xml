@@ -3,4 +3,6 @@
     <string name="app_name">AndroidLab</string>
     <string name="hello_message">Привет мир!</string>
     <string name="ButtonText">I\'m a Button</string>
+    <string name="TextView">Пароль</string>
+    <string name="EditText">Имя для входа</string>
 </resources>
