@@ -5,4 +5,8 @@
     <string name="ButtonText">I\'m a Button</string>
     <string name="TextView">Login</string>
     <string name="EditText">Login name</string>
+    <string name="dialog_title">Alert</string>
+    <string name="dialog_Message">Checkbox chanched!</string>
+    <string name="ok">OK</string>
+    <string name="cancel">CANCEL</string>
 </resources>

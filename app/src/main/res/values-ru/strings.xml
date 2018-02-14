@@ -5,4 +5,9 @@
     <string name="ButtonText">I\'m a Button</string>
     <string name="TextView">Пароль</string>
     <string name="EditText">Имя для входа</string>
+    <string name="Button">Войти</string>
+    <string name="dialog_title">Внимание</string>
+    <string name="dialog_Message">Изменено!</string>
+    <string name="ok">OK</string>
+    <string name="cancel">CANCEL</string>
 </resources>
