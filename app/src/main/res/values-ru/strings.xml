@@ -9,5 +9,7 @@
     <string name="dialog_title">Внимание</string>
     <string name="dialog_Message">Изменено!</string>
     <string name="ok">OK</string>
-    <string name="cancel">CANCEL</string>
+    <string name="cancel">Удалить</string>
+    <string name="Button3">Начать разговор</string>
+    <string name="Button6">Отравить</string>
 </resources>

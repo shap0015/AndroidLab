@@ -11,6 +11,7 @@ public class StartActivity extends Activity {
 
     protected static final String ACTIVITY_NAME = "StartActivity";
     Button button;
+    Button startChatButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +24,15 @@ public class StartActivity extends Activity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent (StartActivity.this, ListItemsActivity.class);
+                startActivityForResult(intent,50);
+            }
+        });
+        startChatButton=findViewById(R.id.button3);
+        startChatButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Log.i(ACTIVITY_NAME, "User clicked Start Chat");
+                Intent intent = new Intent (StartActivity.this, ChatWindow.class);
                 startActivityForResult(intent,50);
             }
         });

@@ -11,7 +11,10 @@
     <string name="dialog_title">Alert</string>
     <string name="dialog_Message">Checkbox chanched!</string>
     <string name="ok">OK</string>
-    <string name="cancel">CANCEL</string>
+    <string name="cancel">Cancel</string>
+    <string name="Button3">Start Chat</string>
+    <string name="Button6">Send</string>
+
 
 
 </resources>
