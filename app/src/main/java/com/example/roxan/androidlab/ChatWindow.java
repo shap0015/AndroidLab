@@ -26,19 +26,21 @@ public class ChatWindow extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chat_window);
-        listView=findViewById(R.id.list);
+        listView=findViewById(R.id.list_scroll);
         message=findViewById(R.id.message);
 
         final ChatAdapter messageAdapter =new ChatAdapter( this );
         listView.setAdapter (messageAdapter);
 
 
-        sendButton=findViewById(R.id.button6);
+        sendButton = findViewById(R.id.button6);
 
         sendButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Log.i("MESSAGERONALD", message.getText().toString());
                 list.add(message.getText().toString());
+                Log.i("MESSAGERONALDLIST", ""+list.size());
                 messageAdapter.notifyDataSetChanged(); //this restarts the process of getCount() & getView()
                 message.setText("");
             }
@@ -46,35 +48,38 @@ public class ChatWindow extends Activity {
     }
     private class ChatAdapter extends ArrayAdapter<String> {
 
-        public ChatAdapter( Context context) {
+        public ChatAdapter(Context context) {
             super(context, 0);
         }
+
         //retutn a number of rows that will be in my ListView
-        public int getCount(){
+        public int getCount() {
             return list.size();
         }
+
         //return the item to show in the list at the specified position
-        public String getItem(int position){
+        public String getItem(int position) {
             return list.get(position);
         }
+
         public View getView(int position, View convertView, ViewGroup parent) {
             LayoutInflater inflater = ChatWindow.this.getLayoutInflater();
-            View result = null ;
-            if(position%2 == 0)
+            TextView dialog;
+            View result = null;
+            if (position % 2 == 0) {
                 result = inflater.inflate(R.layout.chat_row_incoming, null);
-            else
+                dialog = (TextView) result.findViewById(R.id.textView4);
+            } else {
                 result = inflater.inflate(R.layout.chat_row_outgoing, null);
+                dialog = (TextView) result.findViewById(R.id.message_text);
 
-            TextView message = (TextView)result.findViewById(R.id.message_text);
-            message.setText(   getItem(position)  ); // get the string at position
+                //TextView message = (TextView) result.findViewById(R.id.message_text);
+            }
+            Log.i("MESSAGERONALDPOSITION", getItem(position));
+            dialog.setText(getItem(position)); // get the string at position
             return result;
-
-
-        }
-        public long getId(int position){
-            return position;
-
-
         }
     }
-}
+
+    }
+

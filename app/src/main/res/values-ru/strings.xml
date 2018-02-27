@@ -12,4 +12,5 @@
     <string name="cancel">Удалить</string>
     <string name="Button3">Начать разговор</string>
     <string name="Button6">Отравить</string>
+    <string name="Message">Сообщение</string>
 </resources>
